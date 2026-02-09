@@ -19,8 +19,7 @@ git add . # Este comando me sirve para marcar todos los archivos para luego hace
 > Hacemos un commit (Snapshot, instantanea)
 
 ```sh
-git commit -m "mensaje descriptivo"  # 80 caracteres
-
+git commit -m "mensaje descriptivo"  # 80 caracteres maximo
 ```
 
 > Listo timeline de commits (listado de commits)
