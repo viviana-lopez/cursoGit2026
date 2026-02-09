@@ -1,0 +1,31 @@
+# Clase 02 - Git desarrollo colaborativo
+
+## Repaso comandos vistos.
+
+> Muestro el estado y área en la que están los archivos
+
+```sh
+git status
+```
+
+> Marcamos archivos que están en el working directory para posteriormente hacer un commit
+
+```sh
+git add class-01/_ref/* # Marco todos los archivos que están dentro de la carpeta _ref
+git add class-01/* # marca todos los archivos que estan dentro de la carpeta class-01
+git add . # Este comando me sirve para marcar todos los archivos para luego hacer un commit
+```
+
+> Hacemos un commit (Snapshot, instantanea)
+
+```sh
+git commit -m "mensaje descriptivo"  # 80 caracteres
+
+```
+
+> Listo timeline de commits (listado de commits)
+
+```sh
+git log --oneline
+```
+
