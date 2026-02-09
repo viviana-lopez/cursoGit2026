@@ -92,6 +92,7 @@ git status # Forma larga con info.
 
 ## Áreas de GIT
 
+![alt text](image.png)
 
 ## Estado de los archivos
 
