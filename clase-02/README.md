@@ -35,3 +35,14 @@ Dentro del archivo hay que inficar que carpetas o archivs queremos que GIT ignor
 Es un archivo que me permite darle seguimiento a una carpeta que quiero sea parate del repo pero que esté vacía. (para que sea utilizada luego).
 Se hace esto porque GIT no versiona carpetas vacías. Sólo versiona carpetas que tengan archivos dentro.
 Este archivo no lleva ningún tipo de contenido ni código y debe ser generado dentro de la carpeta vacía.
+
+# Ver la diferencia entre WD y SA o LR 
+```sh
+git diff
+```
+
+# Ver más información de un commit
+```sh
+git show <nro de hash>
+git show b20a1a
+```
