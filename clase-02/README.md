@@ -80,3 +80,31 @@ En el caso de que quiera agregar algo pero no quiera cambiar el mensaje
 ```sh
 git commit -a --amend --no-edit
 ```
+
+
+## Trabajar con el remoto  --  Interactuar (sincronizar) el area local con el remotogit add
+
+![alt text](image.png)
+
+#### Existen tres dinamicas: 
+* git push
+* git fetch
+* git pull 
+
+![alt text](image-1.png)
+
+Para agregar un repositorio remoto en mi local
+```sh
+git remote add <alias> <url-al-remoto>
+git remote add origin https://github.com/viviana-lopez/cursoGit2026.git
+```
+## Puedo sincronizar los cambios (subir el repo local al remoto)
+> La primera vez
+```sh
+git push -u origin main # -u <--- indica a git que trabaje en forma sincronizada con la rama remota (main con origin/main)>
+```
+
+> Las siguientes veces, no es necesario indicarle que ramas deben estar sincronizadas (si se trabaja entre mains) y solo se indica que haga el push
+```sh
+git push
+```
