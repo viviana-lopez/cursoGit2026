@@ -108,3 +108,39 @@ git push -u origin main # -u <--- indica a git que trabaje en forma sincronizada
 ```sh
 git push
 ```
+
+## Para verificar si el repositorio está asociado al remoto y las ramas
+
+>Verificar si el repositorio está sociado al remoto
+```sh
+git remote # si devuelve "origin" significa que están asociados
+git remote -v # va a devolver con más detalle si está sociado el local con el remoto
+```
+
+> Ver las ramas
+```sh
+git branch # muestra solamente las ramas locales. "main"
+git branch -r # muestra solamente las ramas remotas. "origin/main"
+git branch -a # muestra todas las ramas (locales y remotas)
+git branch -av # muestra todas las ramas con más detalles, indica que tan desfazadas están
+```
+
+> Tres formas de ver las diferencias entre las ramas
+```sh
+git status
+git branch -av
+git log --oneline -"<nro cantidad de commits>"
+git log --oneline --all
+```
+
+> Sincronización entre el local y el remoto.
+
+Para poder verificar si hay desfazaje en el caso de estar trabajando desde el remoto o en equipo (varios suben actualizaciones en el remoto) se debe traer la información del remoto para poder hacer la comparación, pues git no puede comparar información desconocida. Para esto se debe realizar la sinconización.
+```sh
+git push -u origin main # -u <--- indica a git que trabaje en forma sincronizada con la rama remota (main con origin/main)>. Se hace sólo la 1ra vez que hacemos el push
+git push # actualiza llevando la información local hacia el remoto (LOCAL ==> REMOTO)
+git fetch # actualiza trayendo unicamente la metadata del remoto hacia el local (REMOTO ==> LOCAL). Eto permite visualizar las ramas actualizadas sin actualizar el Local Repository y poder saber si queremos o no traer el archivo actualizado
+git pull # actualiza el Local Repository trayendo la metadata y el archivo actualizado
+```
+
+
