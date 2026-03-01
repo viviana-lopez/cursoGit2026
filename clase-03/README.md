@@ -100,3 +100,36 @@ history
 git config --global --unset alias.sc
 git config --global --unset user.<alias> # este se puede usar para borrar el mail y luego poder reconfigurarlo
 ```
+
+### Empezando con fusiones (juntar 2 ramas)
+Voy a poder fusionar 2 o más ramas entre sí para llevar los cambios de una rama origen a la de destino.
+Los cambios se pueden realizar granularmente (sólo las lineas de codigo o archivos enteros específicos según sea necesario).
+
+## Trabajando con fusiones
+IMPORTANTE: Es que para hacer una fusión. Tengo que estar en la rama de destino. P sea que si me quiero traer los cambios de la rama feature/branches a la rama main, tengo que estar parado en la rama main y traerme los cambios de la otra rama.
+
+```sh
+git switch main
+git merge feature/branches
+```
+> A partir de ese momento pueden pasar 3 cosas:
+* Fast-forward-> Fusión automática -> Git se encarga de resolver la fusión.
+* Tercer vía -> Diferentes algoritmos para resolver la fusión -> Automático
+* Conflicto -> El proceso de fusión es manual. Voy a tener que solventar el conflicto y avisarle a git que lo hice para terminar el proceso de fusión.
+
+```sh
+git add --patch
+```
+
+
+### Distintos ámbitos en GIT (scopes)
+* --system (alto) -> A todo el sistema operativo. Usuarios y repositorios
+* --global -> Aplica a todos los repositorios del usuario actual. (Estandar)
+* --local (bajo) -> Al repositorio específico en el qe estoy trabajando.
+
+```sh
+git config --<scope>
+git config --system
+git config --global
+git config --local 
+```
