@@ -133,3 +133,9 @@ git config --system
 git config --global
 git config --local 
 ```
+## Git Tags
+
+* Marcar versiones de lanzamiento
+* Facilitar despliegues y rollbacks
+* Automatizar versiones en CI/CD
+* Compartir versiones con otrosgit status
