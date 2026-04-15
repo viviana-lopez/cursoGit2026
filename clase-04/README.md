@@ -12,6 +12,7 @@
 
 ```sh
 git stash
+git stash --m "mensaje descriptivo"
 ```
 
 ## Listar los stashes
@@ -19,7 +20,26 @@ git stash
 git stash list
 ```
 
+## Ver uel contenido de un stash en particular (solo muestra la cantidad de lineas agregadas)
+```sh
+git stash show <nro de stash> # me muestra ese numero de stash
+git stash show 0 # me muestra el stash que se encuentra en la posicion 0
+git stash show stash{0}
+```
+
+## Aplicar un stash en particular
+```sh
+git stash apply # aplica el stash de arriba de todo (el mas nuevo)
+git stash apply 1 # stash{1}
+git stash apply 2 # stash{2}
+```
+
 ## Recuperar el stash
 ```sh
 git stash pop # Recupera el último stash realizado y si no hay conflicto lo borra.
+```
+## Borrar stashes
+```sh
+git stash drop # borra el ultimo stash de la lista
+git stash drop <nro stash> # elimina un stash especifico
 ```
