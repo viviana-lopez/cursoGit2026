@@ -1,6 +1,6 @@
 # Clase 04 - Git desarrollo colaborativo
 
-## Stash
+## STASH
 
 > Git tiene un área llamada "stash" donde puedes almacenar temporalmente una captura de tus cambios sin enviarlos al repositorio. Está separada del directorio de trabajo (working directory), del área de preparación (staging area), o del repositorio.
 
@@ -42,4 +42,30 @@ git stash pop # Recupera el último stash realizado y si no hay conflicto lo bor
 ```sh
 git stash drop # borra el ultimo stash de la lista
 git stash drop <nro stash> # elimina un stash especifico
+```
+
+# RESET
+Me permite hacer uno o varios comits y los cambios los arroja a xxx lugar
+Hay de tres tipos:
+* SOFT
+* MIXED
+* HARD
+
+## Git reset soft
+Me permite deshacer uno o varios commits y los cambios los arroja al staging area (SA) (solo se pirerde el titulo del commit)
+```sh
+git reset --soft <nro de hash>
+```
+
+## Git reset mixed (default)
+Me permite deshacer uno o varios commits y los cambios los arroja en el working directory (WD) (se pierde el titulo del commit y el guardado del contenido)
+
+```sh
+git reset <hash>
+git reset --mixed <hash>
+```
+## Git reset hard
+Me permite deshacer uno o varios commits y los cambios los descarta (CUIDADO PIERDO LOS CAMBIOS SOBRE LOS ARCHIVOS)
+```sh
+git reset --hard <hash>
 ```
