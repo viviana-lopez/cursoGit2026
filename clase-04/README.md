@@ -69,3 +69,48 @@ Me permite deshacer uno o varios commits y los cambios los descarta (CUIDADO PIE
 ```sh
 git reset --hard <hash>
 ```
+
+# CREAR TAGS
+Es un etiqueta para los commits
+
+## Crear un tag
+```sh
+git tag v1.0
+# ejemplo de un tag en un commit especifico
+git tag -a v0.8 -m "version no final" <hash> 
+git tag -a v0.8 -m "version no final" c616c7d
+# Ejemplo d eun tag en el último commit
+git tag -a v1.0 -m "version actual de la documentación"
+```
+
+## Listar tags ya creados
+```sh
+git tag --list
+```
+
+## Ver tags ya creados
+```sh
+git show <nombre del tag> # para ver un tag especifico
+git show v0.08
+```
+
+## Eliminar tags
+```sh
+git tag --delete <nombre del tag>
+git tag --delete v0.08
+git tag -d <nombre del tag>
+git tag -d v0.08
+```
+
+## Subir al remoto los tags
+```sh
+git push origin --tags # no se recomienda
+git push origin v1.0
+
+```
+## Eliminar tags del remoto
+```sh
+git push --delete origin <nombre del tag>
+git push <nombre del remoto> :<nombre del tag>
+git push origin :v0.08
+```
